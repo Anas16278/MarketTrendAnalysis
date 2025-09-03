@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+  generator:
+    build: ./services/generator
+    environment:
+      - REDIS_HOST=redis
+      - STREAM=trades
+    depends_on:
+      - redis
+  matcher:
+    build: ./services/matcher
+    environment:
+      - REDIS_HOST=redis
+      - IN_STREAM=trades
+      - OUT_STREAM=matches
+    depends_on:
+      - redis
+  aggregator:
+    build: ./services/aggregator
+    environment:
+      - REDIS_HOST=redis
+      - IN_STREAM=matches
+    depends_on:
+      - redis
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Quant & Software</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Ali A. — Quant & Software Engineer</h1>
+      <p>Algorithmic trading, distributed systems, and ML.</p>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/cv.pdf" download>Download CV</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Algorithmic Trading Bot</h3>
+            <p>MA crossover + RSI reversion, vectorized backtester, CLI; exports equity curves and KPIs.</p>
+            <ul>
+              <li><b>Sharpe</b>: ~0.8–1.2</li>
+              <li><b>CAGR</b>: ~13–18%</li>
+              <li><b>MaxDD</b>: ~12–25%</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Data Analysis & Dashboard</h3>
+            <p>Pandas analytics + Plotly dashboard for prices, correlations, rolling risk, and KPIs.</p>
+            <div class="chart">
+              <iframe src="../projects/data-viz/dashboard.html" title="Dashboard" loading="lazy"></iframe>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Distributed Trade Simulation</h3>
+            <p>Python microservices (Redis Streams): generator → matcher → aggregator; Docker Compose.</p>
+            <ul>
+              <li>1M+ mock trades/day throughput</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>ML Predictive Model</h3>
+            <p>Logistic regression on engineered features (returns, RSI) with time-series CV.</p>
+            <ul>
+              <li><b>ROC AUC</b>: 0.54–0.60</li>
+              <li><b>Accuracy</b>: 0.52–0.58</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="tags">
+          <span>Python</span><span>Go</span><span>Pandas/NumPy</span><span>scikit-learn</span><span>Redis</span><span>Docker</span><span>Plotly</span><span>TypeScript/React</span>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:ali@example.com">ali@example.com</a> · GitHub: <a href="https://github.com/" target="_blank" rel="noreferrer">github.com/</a></p>
+      </section>
+    </main>
+
+    <footer class="container small">© 2025 Ali A.</footer>
+  </body>
+  </html>
+
+
